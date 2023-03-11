@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: integration-node
+    ports:
+      - 8010:8010
+    volumes:
+      - .:/usr/app
+    command: npm run dev
