@@ -18,7 +18,7 @@ export class SendMensageToUserUseCase {
 
         const userFind = await this.slackRepository.getUserByNameOrId({ userName: user });
 
-        if (!userFind.id) {
+        if (userFind && !userFind.id) {
             throw new UserNotFoundError();
         }
 
