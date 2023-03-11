@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { gitlab } from "./gitlab.routes";
+import { slack } from "./slack.routes";
 
 const router = Router();
 
@@ -10,6 +11,7 @@ router.get("/", (req, res) => {
 });
 
 router.use("/gitlab", gitlab);
+router.use("/slack", slack);
 
 
 export { router };

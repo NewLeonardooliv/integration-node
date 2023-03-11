@@ -5,7 +5,7 @@ services:
     build: .
     container_name: integration-node
     ports:
-      - 8010:8010
+      - 8080:8080
     volumes:
       - .:/usr/app
     command: npm run dev
