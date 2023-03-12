@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { commands } from "./commands.routes";
 import { gitlab } from "./gitlab.routes";
 import { slack } from "./slack.routes";
 
@@ -12,6 +13,7 @@ router.get("/", (req, res) => {
 
 router.use("/gitlab", gitlab);
 router.use("/slack", slack);
+router.use("/command", commands);
 
 
 export { router };
