@@ -7,7 +7,10 @@ interface UpdateDatabaseControllerResquest {
 }
 
 export class UpdateDatabaseController implements Controller {
-    constructor(private updateDatabaseUseCase: UpdateDatabaseUseCase) { }
+    constructor(
+        private updateDatabaseUseCase: UpdateDatabaseUseCase
+    ) { }
+
     async handle({ script }: UpdateDatabaseControllerResquest) {
         try {
             const updated = await this.updateDatabaseUseCase.execute({ scriptDatabase: script });
