@@ -4,6 +4,6 @@ import { updateDatabaseController } from "../infra/factories/controllers/UpdateD
 
 const commands = Router();
 
-commands.get('/updateDatase/:script', adapterRoute(updateDatabaseController));
+commands.get('/updateDatabase/:script', adapterRoute(updateDatabaseController));
 
 export { commands }
