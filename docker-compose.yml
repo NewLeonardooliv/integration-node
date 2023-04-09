@@ -8,4 +8,5 @@ services:
       - 8050:8050
     volumes:
       - .:/usr/app
-    command: npm run dev
+      - ./docker:/root/.ssh
+    command: ["npm", "run", "serve"]

@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 interface IAxios {
   url: string;
@@ -8,14 +8,14 @@ interface IAxios {
   data?: any;
 }
 
-export async function useAxios({ url, method, token, contentType = "application/json", data }: IAxios) {
-  return axios({
-    url: url,
-    method: method,
-    headers: {
-      Authorization: token ?? "",
-      "Content-Type": contentType,
-    },
-    data: data,
-  });
+export async function useAxios({ url, method, token, contentType = 'application/json', data }: IAxios) {
+	return axios({
+		url: url,
+		method: method,
+		headers: {
+			Authorization: token ?? '',
+			'Content-Type': contentType,
+		},
+		data: data,
+	});
 }

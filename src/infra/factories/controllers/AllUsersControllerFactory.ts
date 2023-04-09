@@ -1,6 +1,6 @@
-import { SlackRepository } from "../../../modules/Slack/Repositories/Implementations/SlackRepository";
-import { AllUsersController } from "../../../modules/Slack/UseCases/AllUsers/AllUsersController";
-import { AllUsersUseCase } from "../../../modules/Slack/UseCases/AllUsers/AllUsersUseCase";
+import { SlackRepository } from '@modules/Message/Repositories/Implementations/SlackRepository';
+import { AllUsersController } from '@modules/Message/UseCases/AllUsers/AllUsersController';
+import { AllUsersUseCase } from '@modules/Message/UseCases/AllUsers/AllUsersUseCase';
 
 const slackRepository = new SlackRepository();
 const allUsersUseCase = new AllUsersUseCase(slackRepository);

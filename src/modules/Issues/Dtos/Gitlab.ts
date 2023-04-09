@@ -1,0 +1,219 @@
+export type Issues = {
+  id: number;
+  iid: number;
+  projectId: number;
+  title: string;
+  description: string;
+  state: string;
+  created_at: string;
+  updated_at: string;
+  closed_at?: null;
+  closed_by?: null;
+  labels: [];
+  milestone?: null;
+  assignees: [];
+  author: {
+    id: number;
+    username: string;
+    name: string;
+    state: string;
+    avatar_url: string;
+    web_url: string;
+  };
+  type: string;
+  assignee: null;
+  user_notes_count: number;
+  merge_requests_count: number;
+  upvotes: number;
+  downvotes: number;
+  due_date: null;
+  confidential: boolean;
+  discussion_locked: null;
+  issue_type: string;
+  web_url: string;
+  time_stats: {
+    time_estimate: number;
+    total_time_spent: number;
+    human_time_estimate: null;
+    human_total_time_spent: null;
+  };
+  task_completion_status: {
+    count: number;
+    completed_count: number;
+  };
+  blocking_issues_count: number;
+  has_tasks: boolean;
+  _links: {
+    self: string;
+    notes: string;
+    award_emoji: string;
+    project: string;
+    closed_as_duplicate_of: null;
+  };
+  references: {
+    short: string;
+    relative: string;
+    full: string;
+  };
+  severity: string;
+  subscribed: boolean;
+  moved_to_id: null;
+  service_desk_reply_to: null;
+}
+
+export type Comment = {
+  id: number;
+  type?: string;
+  body: string;
+  attachment?: string;
+  author: {
+    id: number;
+    username: string;
+    name: string;
+    state: string;
+    avatar_url: string;
+    web_url: string;
+  };
+  created_at: string;
+  updated_at: string;
+  system: boolean;
+  noteable_id: number;
+  noteable_type: string;
+  resolvable: boolean;
+  confidential?: boolean;
+  internal?: boolean;
+  noteable_iid?: number;
+  commands_changes: any;
+}
+
+export type Files = {
+  alt: string;
+  url: string;
+  full_path: string;
+  markdown: string;
+}
+
+export type Projects = {
+  id: number;
+  description: string;
+  name: string;
+  name_with_namespace: string;
+  path: string;
+  path_with_namespace: string;
+  created_at: string;
+  default_branch: string;
+  tag_list: [];
+  topics: [];
+  ssh_url_to_repo: string;
+  http_url_to_repo: string;
+  web_url: string;
+  readme_url: string;
+  avatar_url: string;
+  forks_count: number;
+  star_count: number;
+  last_activity_at: string;
+  namespace: {
+    id: number,
+    name: string;
+    path: string;
+    kind: string;
+    full_path: string;
+    parent_id: null;
+    avatar_url: string;
+    web_url: string;
+  };
+  _links: {
+    self: string;
+    issues: string;
+    merge_requests: string;
+    repo_branches: string;
+    labels: string;
+    events: string;
+    members: string;
+    cluster_agents: string;
+  };
+  packages_enabled: boolean;
+  empty_repo: boolean;
+  archived: boolean;
+  visibility: string;
+  resolve_outdated_diff_discussions: boolean;
+  container_expiration_policy: {
+    cadence: string;
+    enabled: boolean;
+    keep_n: number,
+    older_than: string;
+    name_regex: string;
+    name_regex_keep: null;
+    next_run_at: string
+  };
+  issues_enabled: boolean;
+  merge_requests_enabled: boolean;
+  wiki_enabled: boolean;
+  jobs_enabled: boolean;
+  snippets_enabled: boolean;
+  container_registry_enabled: boolean;
+  service_desk_enabled: boolean;
+  service_desk_address: null;
+  can_create_merge_request_in: boolean;
+  issues_access_level: string;
+  repository_access_level: string;
+  merge_requests_access_level: string;
+  forking_access_level: string;
+  wiki_access_level: string;
+  builds_access_level: string;
+  snippets_access_level: string;
+  pages_access_level: string;
+  operations_access_level: string;
+  analytics_access_level: string;
+  container_registry_access_level: string;
+  security_and_compliance_access_level: string;
+  emails_disabled: null;
+  shared_runners_enabled: boolean;
+  lfs_enabled: boolean;
+  creator_id: number;
+  import_url: string;
+  import_type: string;
+  import_status: string;
+  import_error: null;
+  open_issues_count: number;
+  runners_token: string;
+  ci_default_git_depth: number;
+  ci_forward_deployment_enabled: boolean;
+  ci_job_token_scope_enabled: boolean;
+  ci_separated_caches: boolean;
+  ci_opt_in_jwt: boolean;
+  ci_allow_fork_pipelines_to_run_in_parent_project: boolean;
+  public_jobs: boolean;
+  build_git_strategy: string;
+  build_timeout: number;
+  auto_cancel_pending_pipelines: string;
+  ci_config_path: null;
+  shared_with_groups: [];
+  only_allow_merge_if_pipeline_succeeds: boolean;
+  allow_merge_on_skipped_pipeline: null;
+  restrict_user_defined_variables: boolean;
+  request_access_enabled: boolean;
+  only_allow_merge_if_all_discussions_are_resolved: boolean;
+  remove_source_branch_after_merge: boolean;
+  printing_merge_request_link_enabled: boolean;
+  merge_method: string;
+  squash_option: string;
+  enforce_auth_checks_on_uploads: boolean;
+  suggestion_commit_message: null;
+  merge_commit_template: null;
+  squash_commit_template: null;
+  auto_devops_enabled: boolean;
+  auto_devops_deploy_strategy: string;
+  autoclose_referenced_issues: boolean;
+  repository_storage: string;
+  keep_latest_artifact: boolean;
+  runner_token_expiration_interval: null;
+  requirements_enabled: boolean;
+  requirements_access_level: string;
+  security_and_compliance_enabled: boolean;
+  compliance_frameworks: [];
+  permissions: {
+    project_access: null;
+    group_access: null;
+  }
+}

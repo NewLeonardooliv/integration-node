@@ -1,5 +1,5 @@
-import { AccessTokenMiddleware } from "../../middlewares/AccessTokenMiddleware";
+import { AccessTokenMiddleware } from '../../middlewares/AccessTokenMiddleware';
 
 const accessTokenMiddleware = new AccessTokenMiddleware();
 
-export { accessTokenMiddleware }
+export { accessTokenMiddleware };

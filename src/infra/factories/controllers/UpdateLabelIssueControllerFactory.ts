@@ -1,6 +1,6 @@
-import { GitlabRepository } from "../../../modules/Gitlab/Repositories/Implementations/GitlabRepository";
-import { UpdateLabelIssueController } from "../../../modules/Gitlab/UseCases/UpdateLabelIssue/UpdateLabelIssueController";
-import { UpdateLabelIssueUseCase } from "../../../modules/Gitlab/UseCases/UpdateLabelIssue/UpdateLabelIssueUseCase";
+import { GitlabRepository } from '@modules/Issues/Repositories/Implementations/GitlabRepository';
+import { UpdateLabelIssueController } from '@modules/Issues/UseCases/UpdateLabelIssue/UpdateLabelIssueController';
+import { UpdateLabelIssueUseCase } from '@modules/Issues/UseCases/UpdateLabelIssue/UpdateLabelIssueUseCase';
 
 const gitlabRepository = new GitlabRepository();
 const updateLabelIssueUseCase = new UpdateLabelIssueUseCase(gitlabRepository);

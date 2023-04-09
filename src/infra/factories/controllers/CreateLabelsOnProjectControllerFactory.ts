@@ -1,6 +1,6 @@
-import { GitlabRepository } from "../../../modules/Gitlab/Repositories/Implementations/GitlabRepository";
-import { CreateLabelsOnProjectController } from "../../../modules/Gitlab/UseCases/CreateLabelsOnProject/CreateLabelsOnProjectController";
-import { CreateLabelsOnProjectUseCase } from "../../../modules/Gitlab/UseCases/CreateLabelsOnProject/CreateLabelsOnProjectUseCase";
+import { GitlabRepository } from '@modules/Issues/Repositories/Implementations/GitlabRepository';
+import { CreateLabelsOnProjectController } from '@modules/Issues/UseCases/CreateLabelsOnProject/CreateLabelsOnProjectController';
+import { CreateLabelsOnProjectUseCase } from '@modules/Issues/UseCases/CreateLabelsOnProject/CreateLabelsOnProjectUseCase';
 
 
 const gitlabRepository = new GitlabRepository();
